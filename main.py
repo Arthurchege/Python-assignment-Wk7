@@ -4,9 +4,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.datasets import load_iris
 
-# ---------------------------
+
 # Task 1: Load and Explore the Dataset
-# ---------------------------
+
 try:
     iris = load_iris(as_frame=True)
     df = iris.frame  # convert to pandas DataFrame
@@ -33,9 +33,9 @@ except Exception as e:
     print("❌ An error occurred while loading the dataset:", str(e))
 
 
-# ---------------------------
+
 # Task 2: Basic Data Analysis
-# ---------------------------
+
 
 # Summary statistics
 print("Summary Statistics:")
@@ -50,9 +50,9 @@ print(grouped, "\n")
 print("Observation: Sepal and petal sizes differ significantly among species.\n")
 
 
-# ---------------------------
+
 # Task 3: Data Visualization
-# ---------------------------
+
 
 sns.set(style="whitegrid")  # nice style for seaborn plots
 
@@ -90,3 +90,12 @@ plt.xlabel("Sepal Length (cm)")
 plt.ylabel("Petal Length (cm)")
 plt.legend(title="Species")
 plt.show()
+
+
+# What I Observed from the Data
+
+# 1. Sepal length and petal length vary a lot, while sepal width stays kind of steady.
+# 2. Iris-setosa has the smallest petals, Iris-virginica the biggest.
+# 3. The petal length histogram shows Iris-setosa is easy to spot, the other two species overlap more.
+# 4. Petal length and width go up together, and this helps separate the three species.
+
